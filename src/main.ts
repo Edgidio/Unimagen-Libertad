@@ -3,13 +3,15 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
 import { AppModule } from './app.module';
 import * as hbs from 'hbs'; // Importar Handlebars para manejar los partials y helpers
-import { ValidationPipe } from '@nestjs/common';
+import { Logger } from '@nestjs/common';
 
 
 import * as session from 'express-session';
 import * as flash from 'connect-flash';
 
-async function bootstrap() {  
+async function bootstrap() { 
+
+  const logger = new Logger(); 
   
   const app = await NestFactory.create<NestExpressApplication>(
     AppModule,
@@ -41,9 +43,9 @@ async function bootstrap() {
     return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
   });
 
-  console.log("Servidor coriiendo en el puerto", process.env.SERVERPORT)
+  await app.listen(process.env.SERVERPORT, process.env.SERVERHOST);
 
-  await app.listen(process.env.SERVERPORT);
+  logger.log(`Servidor corriendo en http://${process.env.SERVERHOST}:${process.env.SERVERPORT}`);
   
 }
 bootstrap();
