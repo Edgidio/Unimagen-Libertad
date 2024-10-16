@@ -1,0 +1,88 @@
+  <!-- Incluir el JavaScript de Leaflet -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+{{!--   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Inicializar el mapa en las coordenadas especificadas
+      const map = L.map('map').setView([10.957778, -63.853611], 13);  // Nivel de zoom = 13
+
+      // Añadir una capa de mapa (puedes usar OpenStreetMap)
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      // Añadir un marcador en las coordenadas
+      L.marker([10.957778, -63.853611]).addTo(map)
+        .bindPopup('Ubicación: 10°57\'28"N 63°51\'13"W')
+        .openPopup();
+    });
+  </script> --}}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Coordenadas
+      const lat = 10.957778;
+      const lng = -63.853611;
+
+      // Inicializar el mapa centrado en las coordenadas
+      const map = L.map('map').setView([lat, lng], 13);
+
+      // Añadir una capa de mapa (usando OpenStreetMap)
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      // Crear el marcador en las coordenadas
+      const marker = L.marker([lat, lng]).addTo(map)
+        .bindPopup('Ubicación: 10°57\'28"N 63°51\'13"W');
+
+      // Abrir Google Maps al hacer clic en el marcador
+      marker.on('click', function() {
+        const googleMapsUrl = `https://www.google.com/maps?q=${lat},${lng}`;
+        window.open(googleMapsUrl, '_blank');  // Abrir en una nueva pestaña
+      });
+    });
+  </script>
+
+
+
+<!-- jquery Min JS -->
+<script src="/js/jquery.min.js"></script>
+<!-- jquery Migrate JS -->
+<script src="/js/jquery-migrate-3.0.0.js"></script>
+<!-- jquery Ui JS -->
+<script src="/js/jquery-ui.min.js"></script>
+<!-- Easing JS -->
+<script src="/js/easing.js"></script>
+<!-- Color JS -->
+<script src="/js/colors.js"></script>
+<!-- Popper JS -->
+<script src="/js/popper.min.js"></script>
+<!-- Bootstrap Datepicker JS -->
+<script src="/js/bootstrap-datepicker.js"></script>
+<!-- Jquery Nav JS -->
+<script src="/js/jquery.nav.js"></script>
+<!-- Slicknav JS -->
+<script src="/js/slicknav.min.js"></script>
+<!-- ScrollUp JS -->
+<script src="/js/jquery.scrollUp.min.js"></script>
+<!-- Niceselect JS -->
+<script src="/js/niceselect.js"></script>
+<!-- Tilt Jquery JS -->
+<script src="/js/tilt.jquery.min.js"></script>
+<!-- Owl Carousel JS -->
+<script src="/js/owl-carousel.js"></script>
+<!-- counterup JS -->
+<script src="/js/jquery.counterup.min.js"></script>
+<!-- Steller JS -->
+<script src="/js/steller.js"></script>
+<!-- Wow JS -->
+<script src="/js/wow.min.js"></script>
+<!-- Magnific Popup JS -->
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<!-- Counter Up CDN JS -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="/js/bootstrap.min.js"></script>
+<!-- Main JS -->
+<script src="/js/main.js"></script>

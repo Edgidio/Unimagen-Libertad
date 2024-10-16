@@ -1,0 +1,135 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+    {{> head}} 
+
+    <body>
+	
+        {{> peloader}}
+	
+        {{> menu}}
+
+        		<!-- Breadcrumbs -->
+		<div class="breadcrumbs overlay">
+			<div class="container">
+				<div class="bread-inner">
+					<div class="row">
+						<div class="col-12">
+							<h2>Contáctenos</h2>
+							<ul class="bread-list">
+								<li><a href="/">Inicio</a></li>
+								<li><i class="icofont-simple-right"></i></li>
+								<li class="active">Contact Us</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Breadcrumbs -->
+		
+         {{!-- <div style=" height: 400px; width: 100%;" id="map"></div> --}}
+        				
+		<!-- Start Contact Us -->
+		<section class="contact-us section">
+			<div class="container">
+				<div class="inner">
+					<div class="row"> 
+						<div class="col-lg-6">
+							<div class="contact-us-left">
+								<!--Start Google-map -->
+								<div style=" height: 610px; width: 100%;" id="map"></div>
+								<!--/End Google-map -->
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="contact-us-form">
+								<h2>Contáctenos</h2>
+								<p>Si tiene alguna pregunta, no dude en contactarnos.</p>
+								<!-- Form -->
+								<form class="form" method="post" action="/contacto">
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="text" name="name" placeholder="Nombre" required="">
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="email" name="email" placeholder="Correo electrónico" required="">
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="text" name="phone" placeholder="Teléfono" required="">
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="text" name="subject" placeholder="Sujeto" required="">
+											</div>
+										</div>
+										<div class="col-lg-12">
+											<div class="form-group">
+												<textarea name="message" placeholder="Yu Mensaje" required=""></textarea>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group login-btn">
+												<button class="btn" type="submit">Enviar</button>
+											</div>
+										</div>
+									</div>
+								</form>
+								<!--/ End Form -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contact-info">
+					<div class="row">
+						<!-- single-info -->
+						<div class="col-lg-4 col-12 ">
+							<div class="single-info">
+								<i class="icofont icofont-ui-call"></i>
+								<div class="content">
+									<h3>+58 412 XXX-XXXX</h3>
+									<p>info@company.com</p>
+								</div>
+							</div>
+						</div>
+						<!--/End single-info -->
+						<!-- single-info -->
+						<div class="col-lg-4 col-12 ">
+							<div class="single-info">
+								<i class="icofont-google-map"></i>
+								<div class="content">
+									<h3>Calle Libertad</h3>
+									<p>Centro medico Libertad, local D, Sector Pueblo Nuevo, Porlamar 6301</p>
+								</div>
+							</div>
+						</div>
+						<!--/End single-info -->
+						<!-- single-info -->
+						<div class="col-lg-4 col-12 ">
+							<div class="single-info">
+								<i class="icofont icofont-wall-clock"></i>
+								<div class="content">
+									<h3>Lunes - Viernes: 7 a.m - 3 p.m</h3>
+									<p>Sabado 8 a.m - 2 p.m</p>
+								</div>
+							</div>
+						</div>
+						<!--/End single-info -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Contact Us -->
+		
+        {{> footer}} 
+		
+        {{> scripts}}
+    </body>
+
+</html>

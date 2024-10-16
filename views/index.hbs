@@ -1,0 +1,895 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+    {{> head}} 
+
+    <body>
+	
+        {{> peloader}}
+	
+        {{> menu}}
+		
+{{!-- 		<div style="margin-left: 70%;" class="alert alert-primary" role="alert">
+			A simple primary alert—check it out!
+		</div> --}}
+		{{#if successReserva}}
+		<div style="position: fixed; top: 95px; right: 20px; z-index: 1050; width: auto; max-width: 300px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); " class="alert alert-primary alert-dismissible fade show custom-alert" id="flashAlert" role="alert">
+ 		
+			{{successReserva}}
+
+		</div>
+
+		<script>
+			// Esperar a que el DOM esté completamente cargado
+			document.addEventListener('DOMContentLoaded', function() {
+				// Seleccionar la alerta
+				const alertElement = document.getElementById('flashAlert');
+
+				// Comprobar si la alerta existe
+				if (alertElement) {
+				// Cerrar la alerta automáticamente después de 3 segundos
+				setTimeout(() => {
+					$(alertElement).alert('close');  // Usando jQuery para cerrar la alerta
+				}, 3000);  // 3000 ms = 3 segundos
+				}
+			});
+		</script>
+		{{/if}}
+		
+		<!-- Slider Area -->
+		<section  class="slider">
+			<div class="hero-slider">
+				
+				<!-- Start Single Slider -->
+				<div class="single-slider" style="background-image:url('img/slider2.jpg')">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text">
+									<h1>¿Estás buscando un <span style="color: #DAA520;">plan de cobertura</span> en atención primaria de salud, radiología y medicina ocupacional?</h1>
+									<p>Nuestros planes ofrecen una cobertura integral en atención primaria de salud, radiología y medicina ocupacional, diseñados para brindar un cuidado completo y especializado, adaptado a tus necesidades de bienestar y prevención. </p>
+									<div class="button">
+										<a href="#" class="btn">Obtener cita</a>
+										<a href="#" class="btn primary">Más información</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Single Slider -->
+				<!-- Start Single Slider -->
+				<div class="single-slider" style="background-image:url('img/slider.jpg')">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text">
+									<h1><span style="color: #DAA520;">Radiología de vanguardia</span> para una atención médica precisa</h1>
+									<p>Ofrecemos planes de cobertura que incluyen acceso a servicios de radiología de última generación, asegurando diagnósticos rápidos y precisos. Nuestro equipo de especialistas está dedicado a brindarte un análisis detallado y atención personalizada para tu salud. </p>
+									<div class="button">
+										<a href="#" class="btn">Obtener cita</a>
+										<a href="#" class="btn primary">Sobre nosotros</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Start End Slider -->
+				<!-- Start Single Slider -->
+				<div class="single-slider" style="background-image:url('img/slider3.jpg')">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text">
+									<h1>Atención <span style="color: #DAA520;">primaria de salud integral</span> para toda la familia</h1>
+									<p>Nuestros planes de atención primaria están diseñados para ofrecer servicios médicos completos y accesibles, enfocados en la prevención y el bienestar. Contamos con un equipo de profesionales comprometidos a brindarte el cuidado que necesitas, desde chequeos regulares hasta asesoramiento en salud personalizada.</p>
+									<div class="button">
+										<a href="#" class="btn">Obtener cita</a>
+										<a href="#" class="btn primary">Contáctanos ahora</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Single Slider -->
+			</div>
+		</section>
+		<!--/ End Slider Area -->
+		
+		<!-- Start Schedule Area -->
+		<section class="schedule">
+			<div class="container">
+				<div class="schedule-inner">
+					<div class="row">
+						<div class="col-lg-4 col-md-6 col-12 ">
+							<!-- single-schedule -->
+							<div class="single-schedule first">
+								<div class="inner">
+									<div class="icon">
+										<i class="fa fa-ambulance"></i>
+									</div>
+									<div class="single-content">
+										<h4>Casos de emergencia</h4>
+										<p>Atendemos casos de emergencia de lunes a sabado, de 7:00 a.m. a 3:00 p.m., con asistencia inmediata.</p>
+										<br>
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 col-12">
+							<!-- single-schedule -->
+							<div class="single-schedule middle">
+								<div class="inner">
+									<div class="icon">
+										<i class="icofont-prescription"></i>
+									</div>
+									<div class="single-content">
+										<h4>Horarios de los médicos</h4>
+										<p>Los médicos están a tu disposición de lunes a viernes y sábados para brindar atención de calidad.</p>
+										<br>
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12 col-12">
+							<!-- single-schedule -->
+							<div class="single-schedule last">
+								<div class="inner">
+									<div class="icon">
+										<i class="icofont-ui-clock"></i>
+									</div>
+									<div class="single-content">
+										<h4>Horario de apertura</h4>
+										<ul class="time-sidual">
+											<li class="day">Lunes - Viernes <span>7:00 a.m - 3:00 p.m</span></li>
+											<li class="day">Sabado <span>8:00 a.m - 2:00 p.m</span></li>
+											<br>
+										</ul>
+										<br>
+										<br>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/End Start schedule Area -->
+
+		<!-- Start Feautes -->
+		<section class="Feautes section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Siempre estamos listos para ayudarle a usted y a su familia.</h2>
+							<img src="/img/section-img.png" alt="#">
+							<p>Estamos siempre a su disposición para ofrecer la ayuda y el apoyo que usted y su familia necesitan, porque su bienestar es nuestra prioridad.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features">
+							<div class="signle-icon">
+								<i class="icofont icofont-ambulance-cross"></i>
+							</div>
+							<h3>Ayuda de emergencia</h3>
+							<p>Brindamos asistencia inmediata en situaciones de emergencia, con un equipo capacitado y recursos adecuados para atender sus necesidades de salud de manera rápida y eficiente..</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features">
+							<div class="signle-icon">
+								<i class="icofont icofont-medical-sign-alt"></i>
+							</div>
+							<h3>Farmacia Enriquecida</h3>
+							<p>Nuestra farmacia enriquecida proporciona una amplia gama de medicamentos y productos de salud, acompañados de asesoría profesional para asegurar que reciba el tratamiento adecuado para su bienestar.</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+					<div class="col-lg-4 col-12">
+						<!-- Start Single features -->
+						<div class="single-features last">
+							<div class="signle-icon">
+								<i class="icofont icofont-stethoscope"></i>
+							</div>
+							<h3>Tratamiento médico</h3>
+							<p>Ofrecemos tratamientos médicos personalizados para abordar diversas condiciones de salud, garantizando un enfoque integral y especializado que promueve su bienestar y recuperación.</p>
+						</div>
+						<!-- End Single features -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Feautes -->
+		
+		<!-- Start Fun-facts -->
+		<div id="fun-facts" class="fun-facts section overlay">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-home"></i>
+							<div class="content">
+								<span class="counter">3468</span>
+								<p>Habitaciones de hospital</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-user-alt-3"></i>
+							<div class="content">
+								<span class="counter">557</span>
+								<p>Médicos especialistas</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont-simple-smile"></i>
+							<div class="content">
+								<span class="counter">4379</span>
+								<p>Pacientes felices</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+					<div class="col-lg-3 col-md-6 col-12">
+						<!-- Start Single Fun -->
+						<div class="single-fun">
+							<i class="icofont icofont-table"></i>
+							<div class="content">
+								<span class="counter">15</span>
+								<p>Años de experiencia</p>
+							</div>
+						</div>
+						<!-- End Single Fun -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/ End Fun-facts -->
+		
+		<!-- Start Why choose -->
+		<section class="why-choose section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Ofrecemos Diferentes Servicios Para Mejorar Tu Salud</h2>
+							<img src="/img/section-img.png" alt="#">
+							<p>Ofrecemos una gama completa de servicios de radiología para mejorar tu salud, incluyendo estudios diagnósticos avanzados y asesoría especializada. Nuestro equipo profesional se dedica a proporcionar imágenes de alta calidad para asegurar diagnósticos precisos y oportunos, apoyando tu bienestar integral.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-12">
+						<!-- Start Choose Left -->
+						<div class="choose-left">
+							<h3>¿Quiénes Somos?</h3>
+							<p>Somos un equipo comprometido de profesionales de la salud dedicados a brindar atención integral y servicios de calidad. Con años de experiencia en el campo de la medicina y radiología, nos enfocamos en mejorar el bienestar de nuestros pacientes a través de un enfoque personalizado y atención especializada. </p>
+{{!--  --}}
+						</div>
+						<!-- End Choose Left -->
+					</div>
+					<div class="col-lg-6 col-12">
+						<!-- Start Choose Rights -->
+						<div class="choose-right">
+							<div class="video-image">
+								<!-- Video Animation -->
+								<div class="promo-video">
+									<div class="waves-block">
+										<div class="waves wave-1"></div>
+										<div class="waves wave-2"></div>
+										<div class="waves wave-3"></div>
+									</div>
+								</div>
+								<!--/ End Video Animation -->
+								<a href="https://www.youtube.com/watch?v=RFVXy6CRVR4" class="video video-popup mfp-iframe"><i class="fa fa-play"></i></a>
+							</div>
+						</div>
+						<!-- End Choose Rights -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Why choose -->
+		
+		<!-- Start Call to action -->
+		<section class="call-action overlay" data-stellar-background-ratio="0.5">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-12">
+						<div class="content">
+							<h2>¿Necesita atención médica de emergencia? Llame al +58 412-XXX-XXXX</h2>
+							<p>Si necesita atención médica de emergencia, no dude en llamar al +58 412-XXX-XXXX. Nuestro equipo de profesionales altamente capacitados está disponible para ofrecerle asistencia inmediata y garantizar que reciba el cuidado necesario en situaciones críticas. Su salud y bienestar son nuestra máxima prioridad.</p>
+							<div class="button">
+								<a href="#" class="btn">Contáctenos ahora</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Call to action -->
+		
+		<!-- Start portfolio -->
+		<section class="portfolio section" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Mantenemos normas de limpieza dentro de nuestro hospital</h2>
+							<img src="/img/section-img.png" alt="#">
+							<p>En nuestro hospital, nos comprometemos a mantener normas rigurosas de limpieza y desinfección para asegurar un entorno seguro y saludable para nuestros pacientes y personal. Implementamos protocolos de higiene estrictos y utilizamos productos de alta calidad, garantizando que cada área esté limpia y libre de contaminantes, porque su bienestar es nuestra prioridad.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12 col-12">
+						<div class="owl-carousel portfolio-slider">
+							<div class="single-pf">
+								<img src="/img/pf1.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="/img/pf2.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="/img/pf3.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="/img/pf4.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="/img/pf1.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="/img/pf2.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="/img/pf3.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+							<div class="single-pf">
+								<img src="/img/pf4.jpg" alt="#">
+								<a href="portfolio-details.html" class="btn">View Details</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End portfolio -->
+		
+		<!-- Start service -->
+		<section id="scrollServicios" class="services section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Ofrecemos Diferentes Servicios Para Mejorar Tu Salud</h2>
+							<img src="/img/section-img.png" alt="#">
+							<p>Ofrecemos una amplia gama de servicios en nuestro servicio de atención primaria de salud (APS) para mejorar tu salud. Nuestros afiliados y beneficiarios recibirán atención de un médico especializado en nuestras instalaciones para tratar diversas patologías, incluyendo malestar general, síndrome diarreico, síndrome emético, vértigo, lumbago, crisis hipertensiva y cefalea. Estamos comprometidos con tu bienestar y calidad de vida a través de un cuidado integral y profesional.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont-medical-sign"></i>
+							<h4><a href="service-details.html">Malestar General</a></h4>
+							<p>Atención médica para evaluar y tratar síntomas de malestar general, garantizando un enfoque integral hacia tu salud. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							
+							<i class="icofont icofont-prescription"></i>
+							<h4><a href="service-details.html">Síndrome Diarreico</a></h4>
+							<p>Diagnóstico y tratamiento de diarrea aguda y crónica, con recomendaciones para la rehidratación y la recuperación. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							
+							<i class="icofont-dizzy"></i>
+							<h4><a href="service-details.html">Síndrome Emético</a></h4>
+							<p>Evaluación y manejo de náuseas y vómitos, proporcionando tratamientos efectivos para aliviar estos síntomas. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont-confounded"></i>
+							<h4><a href="service-details.html">Vértigo</a></h4>
+							<p>Atención especializada para el diagnóstico y tratamiento del vértigo, ayudando a identificar la causa y proporcionar alivio. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont-icu"></i>
+							<h4><a href="service-details.html">Lumbago</a></h4>
+							<p>Evaluación de dolor lumbar y tratamiento personalizado para mejorar la movilidad y reducir el malestar. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont-pills"></i>
+							<h4><a href="service-details.html">Crisis Hipertensiva</a></h4>
+							<p>Manejo de crisis hipertensivas con un enfoque en estabilizar la presión arterial y prevenir complicaciones. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont-stethoscope"></i>
+							<h4><a href="service-details.html">Cefalea</a></h4>
+							<p>Diagnóstico y tratamiento de diferentes tipos de cefalea, con un enfoque en aliviar el dolor y prevenir episodios futuros. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont-xray"></i>
+							<h4><a href="service-details.html">Radiografía</a></h4>
+							<p> Brindamos radiografías precisas y de alta calidad para un diagnóstico rápido y efectivo, utilizando tecnología avanzada para tu bienestar. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End service -->
+		
+		<!-- Pricing Table -->
+		<section id="scrollPlaness" class="pricing-table section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Le brindamos el mejor tratamiento a un precio razonable</h2>
+							<img src="/img/section-img.png" alt="#">
+							<p>En nuestra clínica, creemos que la atención médica de calidad debe estar al alcance de todos. Por eso, ofrecemos tratamientos integrales y personalizados a precios razonables, sin comprometer la excelencia en los servicios que brindamos. Nos esforzamos por combinar tecnología de vanguardia con la experiencia de nuestros profesionales de la salud, para garantizarte el mejor cuidado posible. Sabemos que tu bienestar es una prioridad, y por eso hacemos que la atención médica sea accesible y asequible, cuidando tanto de tu salud como de tu bolsillo.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<!-- Table Head -->
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont-group-students"></i>
+								</div>
+								<h4 class="title">Plan escolar</h4>
+								<div class="price">
+									<p class="amount">$6<span>/ Mensuales</span></p>
+								</div>	
+							</div>
+							<!-- Table List -->
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit</li>
+								<li><i class="icofont icofont-ui-check"></i>Cubitur sollicitudin fentum</li>
+								<li class="cross"><i class="icofont icofont-ui-close"></i>Nullam interdum enim</li>
+								<li class="cross"><i class="icofont icofont-ui-close"></i>Donec ultricies metus</li>
+								<li class="cross"><i class="icofont icofont-ui-close"></i>Pellentesque eget nibh</li>
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" href="#">Reservar ahora</a>
+							</div>
+							<!-- Table Bottom -->
+						</div>
+					</div>
+					<!-- End Single Table-->
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<!-- Table Head -->
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont-people"></i>
+								</div>
+								<h4 class="title">Plan Familiar</h4>
+								<div class="price">
+									<p class="amount">$12<span>/ Mensuales</span></p>
+								</div>	
+							</div>
+							<!-- Table List -->
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit</li>
+								<li><i class="icofont icofont-ui-check"></i>Cubitur sollicitudin fentum</li>
+								<li><i class="icofont icofont-ui-check"></i>Nullam interdum enim</li>
+								<li class="cross"><i class="icofont icofont-ui-close"></i>Donec ultricies metus</li>
+								<li class="cross"><i class="icofont icofont-ui-close"></i>Pellentesque eget nibh</li>
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" href="#">Reservar ahora</a>
+							</div>
+							<!-- Table Bottom -->
+						</div>
+					</div>
+					<!-- End Single Table-->
+					<!-- Single Table -->
+					<div class="col-lg-4 col-md-12 col-12">
+						<div class="single-table">
+							<!-- Table Head -->
+							<div class="table-head">
+								<div class="icon">
+									<i class="icofont-heart-beat"></i>
+								</div>
+								<h4 class="title">Plan empresarial</h4>
+								<div class="price">
+									<p class="amount">$24<span>/ Mensuales</span></p>
+								</div>	
+							</div>
+							<!-- Table List -->
+							<ul class="table-list">
+								<li><i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit</li>
+								<li><i class="icofont icofont-ui-check"></i>Cubitur sollicitudin fentum</li>
+								<li><i class="icofont icofont-ui-check"></i>Nullam interdum enim</li>
+								<li><i class="icofont icofont-ui-check"></i>Donec ultricies metus</li>
+								<li><i class="icofont icofont-ui-check"></i>Pellentesque eget nibh</li>
+							</ul>
+							<div class="table-bottom">
+								<a class="btn" href="#">Book Now</a>
+							</div>
+							<!-- Table Bottom -->
+						</div>
+					</div>
+					<!-- End Single Table-->
+				</div>	
+			</div>	
+		</section>	
+		<!--/ End Pricing Table -->
+		
+		
+		<!-- Start Blog Area -->
+{{!-- 		<section class="blog section" id="blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Keep up with Our Most Recent Medical News.</h2>
+							<img src="/img/section-img.png" alt="#">
+							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="/img/blog1.jpg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">22 Aug, 2020</div>
+									<h2><a href="blog-single.html">We have annnocuced our new product.</a></h2>
+									<p class="text">Lorem ipsum dolor a sit ameti, consectetur adipisicing elit, sed do eiusmod tempor incididunt sed do incididunt sed.</p>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="/img/blog2.jpg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">15 Jul, 2020</div>
+									<h2><a href="blog-single.html">Top five way for solving teeth problems.</a></h2>
+									<p class="text">Lorem ipsum dolor a sit ameti, consectetur adipisicing elit, sed do eiusmod tempor incididunt sed do incididunt sed.</p>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Single Blog -->
+						<div class="single-news">
+							<div class="news-head">
+								<img src="/img/blog3.jpg" alt="#">
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<div class="date">05 Jan, 2020</div>
+									<h2><a href="blog-single.html">We provide highly business soliutions.</a></h2>
+									<p class="text">Lorem ipsum dolor a sit ameti, consectetur adipisicing elit, sed do eiusmod tempor incididunt sed do incididunt sed.</p>
+								</div>
+							</div>
+						</div>
+						<!-- End Single Blog -->
+					</div>
+				</div>
+			</div>
+		</section> --}}
+		<!-- End Blog Area -->
+		
+		<!-- Start clients -->
+		<div class="clients overlay">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-12">
+						<div class="owl-carousel clients-slider">
+							<div class="single-clients">
+								<img src="/img/client1.png" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="/img/client2.png" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="/img/client3.png" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="/img/client4.png" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="/img/client5.png" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="/img/client1.png" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="/img/client2.png" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="/img/client3.png" alt="#">
+							</div>
+							<div class="single-clients">
+								<img src="/img/client4.png" alt="#">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--/Ens clients -->
+		
+		<!-- Start Appointment -->
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				// Supongamos que tienes una variable `errors` en tu vista o en el contexto global
+				const errors = {{#if errors}}true{{else}}false{{/if}};  // Usando Handlebars para saber si hay errores
+
+				console.log(errors)
+
+				// Si existen errores, desplazarse a una sección específica
+				if (errors) {
+				// Aquí seleccionas la sección a la que deseas llevar al usuario
+					setTimeout(function() {
+						document.getElementById("formerror").scrollIntoView({ behavior: "smooth" });
+					}, 500);	
+
+				}
+			});
+		</script>
+
+
+
+		<section class="appointment">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Siempre estamos listos para ayudarte. Reserva una cita</h2>
+							<img src="/img/section-img.png" alt="#">
+							<p id="formerror">Estamos comprometidos a brindarte la atención que necesitas en el momento adecuado. Con un equipo de profesionales dedicados y siempre listos para ayudarte, te ofrecemos la facilidad de reservar una cita de manera rápida y sencilla, asegurando que recibas el mejor cuidado sin demoras.</p>
+						</div>
+					</div>
+				</div>
+				<div  class="row">
+					<div class="col-lg-6 col-md-12 col-12">
+						<form  class="form" action="/" method="post">
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input {{#if errors.name}}class="border-danger"{{/if}} {{#if formData.name}} value="{{formData.name}}"{{/if}} name="name" type="text" placeholder="Nombre">
+									</div>
+
+									{{#if errors.name}}
+									<div class="alert alert-danger" role="alert">
+										{{errors.name}}
+									</div>
+									{{/if}}
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input {{#if errors.email}}class="border-danger"{{/if}} {{#if formData.email}} value="{{formData.email}}"{{/if}} name="email" type="email" placeholder="Correo electrónico">
+									</div>
+
+									{{#if errors.email}}
+									<div class="alert alert-danger" role="alert">
+										{{errors.email}}
+									</div>
+									{{/if}}
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input {{#if errors.phone}}class="border-danger"{{/if}} {{#if formData.phone}} value="{{formData.phone}}"{{/if}} name="phone" type="text" placeholder="Teléfono">
+									</div>
+									{{#if errors.phone}}
+									<div class="alert alert-danger" role="alert">
+										{{errors.phone}}
+									</div>
+									{{/if}}
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input {{#if errors.department}}class="border-danger"{{/if}} {{#if formData.department}} value="{{formData.department}}"{{/if}} type="hidden" name="department" id="departamentoSeleccionado">
+										<div class="nice-select form-control wide" tabindex="department">
+											<span class="current">{{#if formData.department}} {{formData.department}} {{else}} Departamento {{/if}}</span>
+											<ul class="list">
+												<li data-value="Departamento" class="option selected" onclick="setDepartamento('Departamento')">Departamento</li>
+												<li data-value="Cardiología" class="option" onclick="setDepartamento('Cardiología')">Cardiología</li>
+												<li data-value="Neurología" class="option" onclick="setDepartamento('Neurología')">Neurología</li>
+												<li data-value="Odontología" class="option" onclick="setDepartamento('Odontología')">Odontología</li>
+												<li data-value="Gastroenterología" class="option" onclick="setDepartamento('Gastroenterología')">Gastroenterología</li>
+											</ul>
+										</div>
+									</div>
+
+									{{#if errors.department}}
+									<div class="alert alert-danger" role="alert">
+										{{errors.department}}
+									</div>
+									{{/if}}
+
+									<script>
+										function setDepartamento(valor) {
+											document.getElementById('departamentoSeleccionado').value = valor;
+											document.querySelector('.nice-select .current').textContent = valor; // Cambiar el texto visible al seleccionar
+										}
+									</script>
+
+
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input {{#if errors.doctor}}class="border-danger"{{/if}} {{#if formData.doctor}} value="{{formData.doctor}}"{{/if}} type="hidden" name="doctor" id="doctorSelected">
+										<div class="nice-select form-control wide" tabindex="doctor">
+											<span class="currentt">{{#if formData.doctor}} {{formData.doctor}} {{else}} Doctor {{/if}}</span>
+											<ul class="list">
+												<li data-value="Doctor" class="option selected" onclick="setDoctor('Doctor')">Doctor</li>
+												<li data-value="Dr. Akther Hossain" class="option" onclick="setDoctor('Dr. Akther Hossain')">Dr. Akther Hossain</li>
+												<li data-value="Dr. Dery Alex" class="option" onclick="setDoctor('Dr. Dery Alex')">Dr. Dery Alex</li>
+												<li data-value="Dr. Jovis Karon" class="option" onclick="setDoctor('Dr. Jovis Karon')">Dr. Jovis Karon</li>
+											</ul>
+										</div>
+									</div>
+
+									{{#if errors.doctor}}
+									<div class="alert alert-danger" role="alert">
+										{{errors.doctor}}
+									</div>
+									{{/if}}
+
+									<script>
+										function setDoctor(value) {
+											document.getElementById('doctorSelected').value = value;
+											document.querySelector('.nice-select .currentt').textContent = value; // Cambiar el texto visible al seleccionar
+										}
+									</script>
+
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input  {{#if errors.date}}class="border-danger"{{/if}} {{#if formData.date}} value="{{formData.date}}"{{/if}} name="date" type="text" placeholder="Fecha" id="datepicker">
+									</div>
+
+									{{#if errors.date}}
+									<div class="alert alert-danger" role="alert">
+										{{errors.date}}
+									</div>
+									{{/if}}
+								</div>
+								<div class="col-lg-12 col-md-12 col-12">
+									<div class="form-group {{#if errors.message}}border-danger{{/if}}">
+										<textarea name="message" placeholder="Escribe tu mensaje aquí....." >{{#if formData.message}}{{formData.message}}{{/if}}</textarea>
+									</div>
+
+									{{#if errors.message}}
+									<div class="alert alert-danger" role="alert">
+										{{errors.message}}
+									</div>
+									{{/if}}
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-5 col-md-4 col-12">
+									<div class="form-group">
+										<div class="button">
+											<button type="submit" class="btn">Reservar una cita</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-7 col-md-8 col-12">
+									<p>(Te confirmaremos por mensaje de Whatsapp)</p>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-lg-6 col-md-12 ">
+						<div class="appointment-image">
+							<img src="/img/contact-img.png" alt="#">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Appointment -->
+		
+		<!-- Start Newsletter Area -->
+{{!-- 		<section class="newsletter section">
+			<div class="container">
+				<div class="row ">
+					<div class="col-lg-6  col-12">
+						<!-- Start Newsletter Form -->
+						<div class="subscribe-text ">
+							<h6>Sign up for newsletter</h6>
+							<p class="">Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu,<br> homero alterum.</p>
+						</div>
+						<!-- End Newsletter Form -->
+					</div>
+					<div class="col-lg-6  col-12">
+						<!-- Start Newsletter Form -->
+						<div class="subscribe-form ">
+							<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+								<input name="EMAIL" placeholder="Your email address" class="common-input" onfocus="this.placeholder = ''"
+									onblur="this.placeholder = 'Your email address'" required="" type="email">
+								<button class="btn">Subscribe</button>
+							</form>
+						</div>
+						<!-- End Newsletter Form -->
+					</div>
+				</div>
+			</div>
+		</section> --}}
+		<!-- /End Newsletter Area -->
+		
+        {{> footer}} 
+		
+        {{> scripts}}
+    </body>
+
+</html>
